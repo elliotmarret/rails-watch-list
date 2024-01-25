@@ -1,0 +1,13 @@
+
+<h1>Create a New List</h1>
+
+<%= form_with model: @list do |form| %>
+  <div class="form-input">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <br>
+  <%= form.submit 'Create List', class: 'btn btn-primary' %>
+<% end %>
+<br>
+<%= link_to 'Return to Lists', lists_path, class: 'btn btn-primary' %>
