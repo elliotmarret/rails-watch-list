@@ -1,13 +1,14 @@
 <div class="banner">
-  <div class="container">
-    <h1>Welcome to the Lists Page!</h1>
-    <%= link_to 'Add a New List', new_list_path %>
-    <br><br>
-    <h2>Lists created:</h2>
-    <ul>
-    <% @lists.each do |list| %>
-       <li><%= link_to list.name, list_path(list) %></li>
-      <% end %>
-    </ul>
-  </div>
+  <h1>Welcome to the Lists Page!</h1>
+</div>
+
+<br>
+
+<div class="container">
+  <h2>Lists created:</h2>
+  <ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+  </ul>
 </div>
