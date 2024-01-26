@@ -1,10 +1,10 @@
 
 <h1>Create a New List</h1>
 
-<%= form_with model: @list do |form| %>
+<%= simple_form_for @list do |form| %>
   <div class="form-input">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control' %>
+    <%= form.input :name %>
+    <%= form.input :photo, as: :file %>
   </div>
   <br>
   <%= form.submit 'Create List', class: 'btn btn-primary' %>

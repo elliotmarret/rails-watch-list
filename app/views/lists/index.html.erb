@@ -1,14 +1,19 @@
-<div class="banner">
-  <h1>Welcome to the Lists Page!</h1>
+<div class="banner" style="text-align: center;">
+  <h1>Welcome to FilmList!</h1>
 </div>
 
 <br>
 
 <div class="container">
   <h2>Lists created:</h2>
-  <ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4 ">
+      <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) unless list.photo.key.nil? %>
+        <div class="custom-link" style="text-align: center;">
+        <%= link_to list.name, list_path(list) %>
+        </div>
+      </div>
   <% end %>
-  </ul>
+  </div>
 </div>
